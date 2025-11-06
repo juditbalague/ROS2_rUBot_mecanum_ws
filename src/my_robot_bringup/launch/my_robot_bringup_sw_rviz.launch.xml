@@ -33,3 +33,18 @@
         <param name="use_sim_time" value="$(var use_sim_time)"/> 
      </node>
 </launch>
+
+<launch>
+  <arg name="robot" default="rubot/rubot_mecanum_custom.urdf"/>
+  <arg name="custom_world" default="my_custom_world.world"/>
+  <arg name="x0" default="0.0"/>
+  <arg name="y0" default="0.0"/>
+  <arg name="yaw0" default="1.57"/>
+  <param name="use_sim_time" value="true"/>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen">
+    <param name="use_sim_time" value="true"/>
+  </node>
+
+  <node name="gazebo" pkg="gazebo_ros" type="gzserver" args="$(arg custom_world)" output="screen"/>
+  <node name="rviz" pkg="rviz2" type="rviz2" args="-d $(find my_robot_description)/rviz/default.rviz"/>
+</launch>
