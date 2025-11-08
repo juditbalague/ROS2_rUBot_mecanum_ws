@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <world name="default">
+    <!-- Include Ground -->
+    <include>
+      <uri>model://ground_plane</uri>  <!-- This adds a default ground plane -->
+    </include>
+
+    <!-- Include Sun (lighting) -->
+    <include>
+      <uri>model://sun</uri>  <!-- Adds a default light source -->
+    </include>
+
+    
+    <include>
+      <uri>model://groupA1_custom</uri>  
+    </include>
+
+  </world>
+</sdf>
