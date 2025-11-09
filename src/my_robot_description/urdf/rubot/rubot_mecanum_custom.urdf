@@ -17,7 +17,7 @@
     <color rgba="0.75 0.75 0.75 1.0"/>
   </material>
   <material name="purple">
-    <color rgba="0.160 0.32 0.240 1.0"/>
+    <color rgba="0.5 0.1 0.7 1.0"/>
   </material>
 
 
@@ -161,7 +161,7 @@
 
 <!-- 3D-part on top with a fixed joint -->
  <joint name="3D_part_on_top_joint" type="fixed">
-    <origin rpy="0 0 3.14" xyz="-0.085 -0.1 0.01"/>
+    <origin rpy="0 0 0" xyz="-0.1 0.01 0.06"/> 
     <parent link="base_link"/>
     <child link="3D_part_on_top"/>
     <axis xyz="0 -1 0"/>
